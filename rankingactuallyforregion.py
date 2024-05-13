@@ -27,11 +27,12 @@ else:
                 location_id = location['id']
                 is_country = location['isCountry']
                 found = True
-        if not found:
-            print("No se encontró una región o país con ese nombre.")
 
 # Solicitar el límite de resultados dentro del rango permitido
 result_limit = int(input("Introduce el límite de resultados (1-1000), si el número de rankeados en la región indicada es inferior al número indicado se mostrarán todos los rankeados de dicha región: "))
+
+if not found:
+    print("No se encontró una región o país con ese nombre.")
 if result_limit < 1 or result_limit > 1000:
     print("El límite de resultados debe estar entre 1 y 1000.")
 
